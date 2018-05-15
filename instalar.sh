@@ -21,9 +21,9 @@ echo "Pronto! O LAMP está OK. Agora vamos ao Asterisk..."
 sudo su
 apt-get install build-essential wget libssl-dev libncurses5-dev libnewt-dev libxml2-dev linux-headers-$(uname -r) libsqlite3-dev uuid-dev git subversion -y
 cd /usr/src
-wget downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
+wget http://neoricalex.com/asterisk-13-current.tar.gz
 tar zxvf asterisk-13-current.tar.gz
-# cd asterisk-13*
+cd asterisk-13.21.0
 git clone git://github.com/asterisk/pjproject pjproject
 cd pjproject
 ./configure --prefix=/usr --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr CFLAGS='-O2 -DNDEBUG'
